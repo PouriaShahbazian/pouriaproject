@@ -2,7 +2,7 @@ require( "dotenv" ).config();
 const express = require( "express" );
 const cors = require( "cors" );
 
-console.log( process.env.TEST );
+
 const app = express();
 
 
