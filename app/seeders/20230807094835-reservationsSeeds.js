@@ -3,12 +3,11 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return await queryInterface.bulkInsert( "Posts", [
-      { tableId: "1", date: new Date(), userId: 1, createdAt: new Date(), updatedAt: new Date() },
-      { title: "Josh's second post", content: "I can and shall obey", userId: 1, createdAt: new Date(), updatedAt: new Date() }
+    return await queryInterface.bulkInsert( "Reservations", [
+      { tableId: 1, date: new Date(),time: new Date(), guestId:1,numOfPeople:3,additionalInfo:null,duration:2, createdAt: new Date(), updatedAt: new Date() },
     ] );
   },
   down: async (queryInterface, Sequelize) => {
-    return await queryInterface.bulkDelete( "Posts", null, {} );
+    return await queryInterface.bulkDelete( "Reservations", null, {} );
   }
 };
